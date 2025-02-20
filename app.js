@@ -6,18 +6,21 @@ function asignarTextoElemento (elemento, texto) {
 }
 
 function agregarAmigo() {
-    let nuevoAmigo = document.getElementById('amigo').value.trim();
-    if (nuevoAmigo !== '') {
-      listaAmigos.push(nuevoAmigo);
-      document.getElementById('amigo').value = '';
-      actualizarListaAmigos();
-    } else {
-      alert('Ingresa un nombre válido');
-    } 
+  let nuevoAmigo = document.getElementById('amigo').value.trim();
+
+  if (nuevoAmigo === '' || listaAmigos.includes(nuevoAmigo)) {
+      alert(nuevoAmigo === '' ? 'Ingresa un nombre válido' : 'Este nombre ya ha sido agregado.');
+      return;
   }
+
+  listaAmigos.push(nuevoAmigo);
+  document.getElementById('amigo').value = '';
+  actualizarListaAmigos();
+}
     function actualizarListaAmigos() {
         let listaElement = document.getElementById('listaAmigos');
         listaElement.innerHTML = '';
+
         for (let i = 0; i < listaAmigos.length; i++) {
           let nuevoItem = document.createElement("li");
           nuevoItem.textContent = listaAmigos[i];
