@@ -13,9 +13,14 @@ function agregarAmigo() {
       return;
   }
 
+  if (!isNaN(nuevoAmigo) && nuevoAmigo !== '') {
+    alert('Inserte un nombre, no un número.');
+    return;
+}
   listaAmigos.push(nuevoAmigo);
   document.getElementById('amigo').value = '';
   actualizarListaAmigos();
+
 }
     function actualizarListaAmigos() {
         let listaElement = document.getElementById('listaAmigos');
