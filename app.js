@@ -22,7 +22,10 @@ function agregarAmigo() {
   }
 //Agregar el nuevo amigo a la lista
   listaAmigos.push(nuevoAmigo);
+  //Vaciar el input y enfocarlo
   document.getElementById('amigo').value = '';
+  document.getElementById('amigo').focus(); 
+//Actualizar la lista de amigos
   actualizarListaAmigos();
 }
 //Función para actualizar la lista de amigos
