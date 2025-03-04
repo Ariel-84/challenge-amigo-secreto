@@ -7,7 +7,7 @@ function asignarTextoElemento(elemento, texto) {
     elementoHTML.innerHTML = texto;
 }
 
-// Función para vaciar el input y enfocarlo al inicio
+// Función para vaciar el input y enfocarlo al inicio.
 function vaciarYEnfocarInput() {
   document.getElementById('amigo').value = '';
   document.getElementById('amigo').focus();
@@ -58,7 +58,7 @@ function sortearAmigo() {
   // Vaciar el input y enfocarlo al inicio.
   vaciarYEnfocarInput();
 
-  if (listaAmigos.length < 2) {  // Validar que haya al menos dos amigos
+  if (listaAmigos.length < 2) {  // Validar que haya al menos dos amigos.
     alert('Debe haber al menos dos amigos para realizar el sorteo.');
     return; 
   }
