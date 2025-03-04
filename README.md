@@ -3,7 +3,8 @@
 Este es un pequeño proyecto en JavaScript para agregar amigos a una lista y sortear uno al azar.
 
 ## 🚀 Funcionalidades  
-- Agregar amigos a una lista.  
+- Agregar amigos a una lista.
+- Vaciar y enfocar el imput.  
 - Validar nombres duplicados, numeros o vacíos.  
 - Sortear un amigo al azar.  
 - Mostrar el resultado en pantalla.  
