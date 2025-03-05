@@ -27,7 +27,7 @@ function agregarAmigo() {
       return; 
   }
 
-  // Condición para validar que el nombre no sea un número.
+  // Condición para validar que no se inserte un número.
   if (!isNaN(nuevoAmigo) && nuevoAmigo !== '') {
     alert('Inserte un nombre, no un número.');
     return; 
@@ -57,8 +57,8 @@ function actualizarListaAmigos() {
 function sortearAmigo() {
   // Vaciar el input y enfocarlo al inicio.
   vaciarYEnfocarInput();
-
-  if (listaAmigos.length < 2) {  // Validar que haya al menos dos amigos.
+  // Validar que haya al menos dos amigos.
+  if (listaAmigos.length < 2) {  
     alert('Debe haber al menos dos amigos para realizar el sorteo.');
     return; 
   }
